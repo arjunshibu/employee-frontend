@@ -1,0 +1,515 @@
+$bgColor: #fafafa;
+$primaryColor: #03aeee;
+$secondaryColor: #ffffff;
+$infoColor: #eaf9ff;
+$successColor: #d3f4be;
+$warningColor: #f5ecb8;
+$dangerColor: #ffbfbf;
+$dangerDarkColor: #ff6464;
+$shadowColor: #dfdede;
+$inputColor: #7a7676;
+$navBgColor: #f1f8ff;
+$navLinkColor: #005e80;
+$shadow: 2px 2px 5px $shadowColor;
+
+body {
+  background-color: $bgColor;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $navBgColor;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.nav-header-logo {
+  margin-left: 2em;
+}
+
+.login-logo {
+  margin-bottom: 1em;
+}
+
+.nav-items {
+  display: flex;
+  margin-right: 3em;
+  list-style-type: none;
+}
+
+.nav-item {
+  margin: 0 15px 0 15px;
+}
+
+.nav-item:first-child {
+  margin-left: 0;
+}
+
+.nav-item:last-child {
+  margin-right: 0;
+}
+
+.nav-item-link {
+  color: $navLinkColor;
+}
+
+aside {
+  width: 300px;
+  height: 100%;
+  position: fixed;
+  margin-top: -30px;
+  background-color: $secondaryColor;
+  box-shadow: $shadow;
+}
+
+.app-title {
+  text-align: center;
+  margin-top: 22em;
+}
+
+.app-title-company {
+  color: #ff003f;
+}
+
+.sidebar-item {
+  background-color: $primaryColor;
+  color: $secondaryColor;
+  font-weight: bold;
+  list-style-type: none;
+  padding: 20px;
+  border-radius: 29px 0px 0px 29px;
+  position: relative;
+}
+
+.sidebar-link {
+  color: $secondaryColor;
+}
+
+.sidebar-link-logo {
+  background-color: $secondaryColor;
+  width: 20px;
+  padding: 8px;
+  border-radius: 100%;
+  position: absolute;
+  bottom: 14px;
+  left: 15px;
+}
+
+.sidebar-link-text {
+  margin-left: 45px;
+}
+
+.card {
+  background-color: $secondaryColor;
+  padding: 15px 25px 15px 25px;
+  box-shadow: $shadow;
+  border-radius: 10px;
+}
+
+.main-content {
+  margin: 30px 20px 30px 330px;
+  margin-top: 110px;
+}
+
+.main-content > * {
+  margin: 25px 0 25px 0;
+}
+
+.create-employee-form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin: 20px;
+}
+
+input {
+  color: $inputColor;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+input,
+select,
+.file-input {
+  background-color: #fafafa;
+  border: 1px solid rgb(228, 221, 221);
+  border-radius: 7px;
+  padding: 10px;
+}
+
+select {
+  color: $inputColor;
+  outline: none;
+}
+
+input:focus,
+select:focus {
+  border-color: grey;
+  outline: none;
+}
+
+.file-input {
+  color: $inputColor;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: small;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.file-input-hidden {
+  visibility: hidden;
+}
+
+.file-browse {
+  border: 1px solid #e4dddd;
+  border-radius: 7px;
+  padding: 5px 15px;
+  margin-right: -5px;
+}
+
+.create-employee-form-buttons {
+  margin: -20px 0 20px 20px;
+  width: 320px;
+  display: flex;
+  justify-content: space-between;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+form > * {
+  margin: 10px 0 10px 0;
+}
+
+input:focus {
+  outline: none;
+}
+
+.login-form-input {
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.login-form-input label {
+  position: absolute;
+  padding: 0 12px 0 12px;
+  font-size: small;
+  color: $primaryColor;
+  top: -8px;
+  left: 9px;
+  background-color: $bgColor;
+  padding: 0 5px 0 5px;
+  visibility: hidden;
+}
+
+.login-form-input input {
+  border: 1px solid #b4b7bd;
+  border-radius: 5px;
+  width: 100%;
+  height: 40px;
+  padding: 0 12px 0 12px;
+  caret-color: $primaryColor;
+}
+
+.login-form-input:focus-within label {
+  visibility: visible;
+}
+
+.login-form-input input:focus-within {
+  border-color: $primaryColor;
+}
+
+.login-form-input input:focus::placeholder {
+  opacity: 0;
+}
+
+button {
+  height: 40px;
+  font-size: medium;
+  border-radius: 4px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.btn-sm {
+  width: 150px;
+}
+
+.btn-xs {
+  width: 100px;
+  height: 32px;
+  margin-right: 10px;
+}
+
+.btn-ghost {
+  border: none;
+  background-color: inherit;
+  width: 30px;
+  margin: 0 5px 0 5px;
+}
+
+.btn-primary {
+  border: 0px;
+  background-color: $primaryColor;
+  color: $secondaryColor;
+}
+
+.btn-primary:hover {
+  background-color: #0ba0d6;
+}
+
+.btn-primary:active {
+  background-color: #0b92c4;
+}
+
+.btn-secondary {
+  border: 1px solid grey;
+  background-color: $secondaryColor;
+  color: grey;
+}
+
+.btn-secondary:hover {
+  background-color: #f8f4f4;
+}
+
+.btn-secondary:active {
+  background-color: #e2e2e2;
+}
+
+.login {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-art {
+  height: 90%;
+  border-radius: 2%;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+header .input {
+  flex-direction: row;
+  align-items: center;
+  margin: 0;
+}
+
+header select {
+  background-color: $infoColor;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 30px 10px 30px;
+  margin-left: 15px;
+  color: #000000;
+}
+
+header a {
+  margin-left: 100px;
+  color: #000000;
+  background-color: $infoColor;
+  border-radius: 50px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px 10px 30px;
+}
+
+header a span:first-child {
+  border-radius: 100%;
+  background-color: $primaryColor;
+  width: 60px;
+  height: 60px;
+  margin-left: -30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: xx-large;
+  color: $secondaryColor;
+}
+
+header a span:last-child {
+  margin-left: 15px;
+}
+
+table {
+  border-spacing: 0 10px;
+  width: 100%;
+}
+
+tr {
+  box-shadow: $shadow;
+  border-radius: 100px;
+}
+
+thead tr {
+  background-color: $infoColor;
+}
+
+tbody tr {
+  background-color: $secondaryColor;
+}
+
+th,
+td {
+  text-align: left;
+}
+
+th {
+  padding: 17px;
+}
+
+td {
+  padding: 7px 15px 7px 15px;
+}
+
+.icon-primary {
+  color: $primaryColor;
+}
+
+.icon-danger {
+  color: $dangerDarkColor;
+}
+
+.icon-sm {
+  box-sizing: border-box;
+  padding: 18px;
+}
+
+.title-case {
+  text-transform: capitalize;
+}
+
+.badge {
+  display: flex;
+  justify-content: center;
+  border-radius: 40px;
+  padding: 5px 15px;
+  width: 80px;
+}
+
+.badge-success {
+  background-color: $successColor;
+}
+
+.badge-danger {
+  background-color: $dangerColor;
+}
+
+.badge-warning {
+  background-color: $warningColor;
+}
+
+.employee-details {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.employee-details > section {
+  width: 16%;
+  min-width: 200px;
+}
+
+.employee-details > section > p:first-child {
+  color: #8b8d9d;
+}
+
+.modal-overlay {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: -25px;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #00000066;
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: 13% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 17%;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: center;
+}
+
+.modal-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: -15px 0 15px 0;
+}
+
+.modal-body > p {
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.modal-close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
