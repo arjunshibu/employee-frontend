@@ -1,3 +1,5 @@
+import '../css/styles.scss';
+
 const FileInputField = ({
   label = '',
   name = '',
@@ -5,15 +7,21 @@ const FileInputField = ({
   placeholder = '',
 }) => {
   return (
-    <div className="input">
+    <div className="input file">
       <label htmlFor={id}>{label}</label>
-      <label htmlFor={id} className="proof-input">
-        <span id="file-name" className="file-name">
+      <label htmlFor={id} className="file-input">
+        <span id="file-label-text" className="file-label-text">
           Choose file
         </span>
-        <span className="btn-browse">Browse</span>
+        <span className="file-browse">Browse</span>
       </label>
-      <input type="file" name={name} id={id} placeholder={placeholder} />
+      <input
+        type="file"
+        name={name}
+        className="file-input-hidden"
+        id={id}
+        placeholder={placeholder}
+      />
     </div>
   );
 };
